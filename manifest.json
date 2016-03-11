@@ -1,0 +1,14 @@
+{
+	"name" : "Gitlab group search",
+	"version" : "0.0.1",
+	"description" : "Search text in all projects of group",
+	"permissions" : [
+		"declarativeContent"
+	],
+	"manifest_version" : 2,
+	"background" : {
+		"scripts" : ["background.js"],
+		"persistent" : false
+	}
+	 
+}
