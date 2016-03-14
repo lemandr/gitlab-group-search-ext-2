@@ -2,13 +2,22 @@
 	"name" : "Gitlab group search",
 	"version" : "0.0.1",
 	"description" : "Search text in all projects of group",
-	"permissions" : [
+	/*"permissions" : [
 		"declarativeContent"
-	],
+	],*/
 	"manifest_version" : 2,
-	"background" : {
+	/*"background" : {
 		"scripts" : ["background.js"],
 		"persistent" : false
-	}
-	 
+	},
+	"page_action" : {
+		"default_icon" : "search.png",
+    	"default_title" : "Search in group"
+	}*/
+	"content_scripts" : [
+		{
+			"matches" : ["https://gitlab.com/*", "https://roll.gitlab.ru/*"],
+			"js" : ["contentscript.js"]
+		}
+	] 
 }
